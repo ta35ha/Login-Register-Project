@@ -1,0 +1,164 @@
+/* ana özellikleri tanımlama ve özellikler sıfırlama */
+
+body{
+    --color--primary: #62c571;
+    --color--primary-dark: #295a31;
+    --color-secondary: rgba(46,46,146,0.7);
+    --color-error:rgba(238, 10, 10, 0.5);
+    --color-succes: rgb(18,96,18);
+    --border-radius:5px;
+    --color-main:green;
+    --color-component:rgb(114, 114, 7);
+    --color-component-hover:rgb(179, 104, 7);
+
+    /* renk geçişleri için */
+    background: linear-gradient(to right,var(--color--primary),var(--color-secondary)),url(bg.jpeg) ;
+    /* resmı sabitlemek için */
+    background-attachment: fixed;
+    /* resmı kaplamak için */
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+
+    /*  resim boyutunu %100 yapmak için */
+    height: 100vh;
+    font-size: 20px;
+
+    /* bulunduğu yeri kaplasın diye */
+    display: flex;
+
+    /* yatay ortalama için */
+    justify-content:center;
+   /* dikey ortalama için */
+     align-items: center;
+
+}
+
+/* ana taşıyıcı alanı */
+.container{
+    /* içi doldukça büyüsün demek width */
+    width: 400px;
+    max-height: 400px;
+    margin: 1rem;
+
+
+
+
+}
+
+
+/* Form Alanı */
+.form{
+    
+    /* içindekı yazıyı ortalamak için */
+    text-align: center;
+    /* aşağıdan boşluk bırakmak için */
+    margin-bottom: 1rem;
+    /* biraz gölgelik vermek için */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+    
+    /* etrafını kıvırmak için */
+
+      border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: white;
+
+    
+}
+
+.form__title{
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.form__message--error{
+  color: var(--color-error);
+}
+
+.form__input--group{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+
+}
+
+.form__input-error-message{
+
+  color: var(--color-error);
+  font-size: 0.8rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  
+
+}
+.form__input__group{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form__input{
+  width: 100%;
+  /* bir şey bulunduğu yerden dışarı taşıyorsa onu içeri dahi letmek için
+   */
+   
+   box-sizing: border-box;
+   padding: 0.7rem;
+   border-radius: var(--border-radius);
+   outline: none;
+   border: 2px solid #ddd;
+   background-color:#eee;
+   transition: background 0.3s, border-color 0.3s;
+}
+
+/* iki nokta sözde sınıf demek */
+.form__input:focus{
+  border-color: var(--color-main);
+  background-color: white;
+
+
+}.form__button{
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  outline: none;
+  background-color:var(--color-component);
+  border-radius:var(var(--border-radius));
+}
+
+.form__button:hover{
+  background-color: var(--color-main);
+}
+
+.form__button:active{
+  transform: scale(0.90);
+}
+
+.form__link{
+  color: var(--color--primary-dark);
+  /* kelimenin altındaki çizgiyi kaldırmak için */
+  text-decoration: none;
+  /* üzerine tıklayınca el olsun diye */
+  cursor: pointer;
+  margin-bottom: -10px;
+
+}
+/* 
+yazılardan birini sağ birini sola atmak için
+display: flex 
+*/
+
+/* 
+yatay ortalama için 
+justify-content:space-between */
+
+.form__link:hover{
+  color: var(--color-component-hover);
+
+}
+.form__text_register{
+  margin: 10px;
+}
